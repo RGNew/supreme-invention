@@ -11,17 +11,15 @@ rand_val = random.randint(0,25)  # generates a random number from 0 to 25
 # letter = alphabet[rand_val]
 # print(letter)
 
-word_length = 5
-sentence_word_count = 5
 paragraph_sentence_count = 4
 
-def random_word_gen(word_length=5):
+def random_word_gen():
     '''
     Returns a random word of word_length composed of letters of the alphabet.
     '''
     
     word = ''
-
+    word_length = random.randint(1,10)
     for _ in range(word_length):
         rand_val = random.randint(0,25)  # select a random int from 0 to 25
         letter = alphabet[rand_val]  # use previous random int to select letter
@@ -29,12 +27,13 @@ def random_word_gen(word_length=5):
 
     return word
 
-def random_sentence_gen(sentence_word_count=5):
+def random_sentence_gen():
     '''
     Returns a sentence of sentence_word_count composed of randomly generated words.
     It uses the random_word_gen function to generate words.
     '''
 
+    sentence_word_count = random.randint(1,7)  # selects a random number for word count in sentence
     sentence = random_word_gen()  # generates the first word
     sentence = sentence.capitalize()  # capitalizes the first word
 

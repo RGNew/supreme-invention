@@ -10,7 +10,7 @@ Miscellaneous Python scripts
 ## TODO
 1. function for random sentence COMPLETED
     1. provide it the number of words COMPLETED
-    2. capitalize the first word (look at string.upper documentation)
+    2. capitalize the first word (look at string.upper documentation) COMPLETED
     3. end with a period COMPLETED
 
 2. Improve the random word generator.
