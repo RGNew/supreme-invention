@@ -19,11 +19,13 @@ Miscellaneous Python scripts
     3. Think about using markov chain draws??
 
 3. function for paragraphs
-  i. vary the number of sentences
+    1.  vary the number of sentences
+   
 4. function for entire document
-  i. save document with given name and length
-  ii. vary the lengths of paragraphs
-  iii. save the document as an html file with nice formatting.
-    a. make a header with a given (or random) name
-    b. create p objects for paragraphs.
+    1. save document with given name and length
+    2. vary the lengths of paragraphs
+    3. save the document as an html file with nice formatting.
+      1. make a header with a given (or random) name
+      2. create p objects for paragraphs.
+   
 5. look at some NLP libraries to play with
