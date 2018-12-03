@@ -9,21 +9,15 @@ Miscellaneous Python scripts
 
 ## TODO
 1. function for random sentence COMPLETED
-   
-  i. provide it the number of words COMPLETED
-
-  ii. capitalize the first word (look at string.upper documentation)
-
-  iii. end with a period
+  1. provide it the number of words COMPLETED
+  2. capitalize the first word (look at string.upper documentation)
+  3. end with a period
 
 2. Improve the random word generator.
-   
   i. make more frequent draws from vowels and less frequent to consonants and evel less to xz etc...
-
   ii. Use random.choice !
-
   iii. Think about using markov chain draws??
-  
+
 3. function for paragraphs
   i. vary the number of sentences
 4. function for entire document
