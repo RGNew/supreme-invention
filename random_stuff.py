@@ -35,7 +35,8 @@ def random_sentence_gen(sentence_word_count=5):
     It uses the random_word_gen function to generate words.
     '''
 
-    sentence = ''
+    sentence = random_word_gen()  # generates the first word
+    sentence = sentence.capitalize()  # capitalizes the first word
 
     for _ in range(sentence_word_count):  # for loop to create the sentence by concatenating random words
         rand_word = random_word_gen()  # calls the random_word_gen function to generate random word
@@ -44,4 +45,4 @@ def random_sentence_gen(sentence_word_count=5):
     return sentence
 
 #print(f'The word is {random_word_gen(word_length)}.')  # print out the full word
-print(f'{random_sentence_gen(sentence_word_count)}.')  # prints the sentence to the console
+print(f'{random_sentence_gen(sentence_word_count)}.')  # prints the sentence to the console with period
