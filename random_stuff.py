@@ -12,8 +12,8 @@ rand_val = random.randint(0,25)  # generates a random number from 0 to 25
 # print(letter)
 
 word_length = 5
-
 sentence_word_count = 5
+paragraph_sentence_count = 4
 
 def random_word_gen(word_length=5):
     '''
@@ -44,5 +44,15 @@ def random_sentence_gen(sentence_word_count=5):
     
     return sentence
 
+def random_paragraph_gen(paragraph_sentence_count=4):
+    '''
+    Prints out a paragraph composed of paragraph_sentence_count randomized sentences.
+    '''
+
+    for _ in range(paragraph_sentence_count):  # for loop to print each sentence
+        paragraph_sentence = random_sentence_gen()  # generates the current sentence
+        print(f'{paragraph_sentence}.', end=' ')  # prints the current sentence with a period
+
 #print(f'The word is {random_word_gen(word_length)}.')  # print out the full word
-print(f'{random_sentence_gen(sentence_word_count)}.')  # prints the sentence to the console with period
+#print(f'{random_sentence_gen(sentence_word_count)}.')  # prints the sentence to the console with period
+random_paragraph_gen()
