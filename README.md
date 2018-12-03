@@ -11,7 +11,7 @@ Miscellaneous Python scripts
 1. function for random sentence COMPLETED
     1. provide it the number of words COMPLETED
     2. capitalize the first word (look at string.upper documentation)
-    3. end with a period
+    3. end with a period COMPLETED
 
 2. Improve the random word generator.
     1. make more frequent draws from vowels and less frequent to consonants and evel less to xz etc...

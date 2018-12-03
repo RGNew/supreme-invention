@@ -1,11 +1,11 @@
 import string
 import random
 
-alphabet = string.ascii_lowercase
+alphabet = string.ascii_lowercase  # creates string from all lowercase letters
 
 #print(alphabet)
 
-rand_val = random.randint(0,25)
+rand_val = random.randint(0,25)  # generates a random number from 0 to 25
 #print(rand_val)
 
 # letter = alphabet[rand_val]
@@ -37,11 +37,11 @@ def random_sentence_gen(sentence_word_count=5):
 
     sentence = ''
 
-    for _ in range(sentence_word_count):  # for loop used to create the sentence by concatinating random words
+    for _ in range(sentence_word_count):  # for loop to create the sentence by concatenating random words
         rand_word = random_word_gen()  # calls the random_word_gen function to generate random word
         sentence = sentence + ' ' + rand_word  # combines the randomly generated words into a sentence
     
     return sentence
 
 #print(f'The word is {random_word_gen(word_length)}.')  # print out the full word
-print(random_sentence_gen(sentence_word_count))  # prints the sentence to the console
+print(f'{random_sentence_gen(sentence_word_count)}.')  # prints the sentence to the console
