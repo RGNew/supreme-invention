@@ -25,7 +25,7 @@ Miscellaneous Python scripts
     1. save document with given name and length
     2. vary the lengths of paragraphs
     3. save the document as an html file with nice formatting.
-      1. make a header with a given (or random) name
-      2. create p objects for paragraphs.
+        1. make a header with a given (or random) name
+        2. create p objects for paragraphs.
    
 5. look at some NLP libraries to play with
