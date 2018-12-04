@@ -42,9 +42,26 @@ def random_paragraph_gen():
     '''
 
     paragraph_sentence_count = random.randint(1,6)
-    
+    paragraph = ''
+
     for _ in range(paragraph_sentence_count):  # for loop to print each sentence
         paragraph_sentence = random_sentence_gen()  # generates the current sentence
-        print(f'{paragraph_sentence}.', end=' ')  # prints the current sentence with a period
+        paragraph += paragraph_sentence + '. '
+    
+    return paragraph
 
-random_paragraph_gen()
+def random_document_gen():
+    '''
+    Prints mutiple randomized paragraphs to a document.
+    '''
+
+    paragraph_count = random.randint(5,10)
+    paragraph = ''
+
+    with open('random_document.txt','w') as f:
+        for _ in range(paragraph_count):
+            paragraph = random_paragraph_gen()
+            f.write(paragraph + '\n\n')
+
+#random_paragraph_gen()
+random_document_gen()
