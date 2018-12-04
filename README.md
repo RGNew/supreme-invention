@@ -28,4 +28,29 @@ Miscellaneous Python scripts
         1. make a header with a given (or random) name
         2. ~~create p objects for paragraphs.~~
    
-5. look at some NLP libraries to play with
+5. Take user input.
+    1. Take header name
+    2. Take count for letters in words.
+    3. Take in desired filename.
+    4. Take multiple inputs for determining range.
+   
+6. CSS for HTML.
+    1. Familiarize self with CSS.
+    2. Apply bootstrap formatting.
+    3. Random formatting for HTML.
+    4. Grab formatting from multiple websites to play with.
+   
+7. BeautifulSoup
+    1. https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+    2. Parse more websites using it.
+    3. Creating websites in style of those websites.
+   
+8. Flask
+    1. Tutorial Videos
+    2. Creating Flask website for random generation.
+    3. Learn some of the Jinja stuff.
+    4. Database??
+
+9. Adding Javascript to site. 
+ 
+10. look at some NLP libraries to play with
