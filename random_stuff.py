@@ -41,27 +41,27 @@ def random_paragraph_gen():
     Prints out a paragraph composed of paragraph_sentence_count randomized sentences.
     '''
 
-    paragraph_sentence_count = random.randint(1,6)
-    paragraph = ''
+    paragraph_sentence_count = random.randint(1,6)  # sets the amount of sentences in the paragraph
+    paragraph = ''  # intializes the paragraph to be empty
 
     for _ in range(paragraph_sentence_count):  # for loop to print each sentence
         paragraph_sentence = random_sentence_gen()  # generates the current sentence
-        paragraph += paragraph_sentence + '. '
+        paragraph += paragraph_sentence + '. '  # appends the next sentence to the paragraph
     
-    return paragraph
+    return paragraph  # returns the paragraph from the function
 
 def random_document_gen():
     '''
     Prints mutiple randomized paragraphs to a document.
     '''
 
-    paragraph_count = random.randint(5,10)
-    paragraph = ''
+    paragraph_count = random.randint(5,10)  # picks a random integer for the amount of paragraphs
+    paragraph = ''  # initializes the paragraph to an empty string
 
-    with open('random_document.txt','w') as f:
-        for _ in range(paragraph_count):
-            paragraph = random_paragraph_gen()
-            f.write(paragraph + '\n\n')
+    with open('random_document.html','w') as f:  # opens the HTML document that will be written to
+        for _ in range(paragraph_count):  #  for loop for writing paragraphs to document
+            paragraph = random_paragraph_gen()  # generates the current random paragraph
+            f.write('<p>' + paragraph + '</p>')  # writes the current paragraph to the document with p tags
 
 #random_paragraph_gen()
-random_document_gen()
+random_document_gen()  # runs the fucntion to generate the randomized HTML doc
