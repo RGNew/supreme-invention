@@ -1,9 +1,20 @@
 import string
 import random
+from markov_bigrams import monogram_prob
 
 alphabet = string.ascii_lowercase  # creates string from all lowercase letters
 
 rand_val = random.randint(0,25)  # generates a random number from 0 to 25
+
+def random_letter_gen(num_letters=1):
+    '''
+    Create list random letters using the standard English frequency.
+    '''
+    letters = list(monogram_prob.keys())
+    probs = list(monogram_prob.values())
+    generated_letters = random.choices(letters, probs, k=num_letters)
+    return generated_letters
+
 
 def random_word_gen():
     '''
@@ -13,10 +24,8 @@ def random_word_gen():
     word = ''
     word_length = random.randint(1,10)
 
-    for _ in range(word_length):
-        rand_val = random.randint(0,25)  # select a random int from 0 to 25
-        letter = alphabet[rand_val]  # use previous random int to select letter
-        word += letter  #  add each letter together into a string
+    letters = random_letter_gen(word_length)
+    word = ''.join(letters)
 
     return word
 
