@@ -5,7 +5,7 @@ from markov_bigrams import monogram_prob
 alphabet = string.ascii_lowercase  # creates string from all lowercase letters
 
 rand_val = random.randint(0,25)  # generates a random number from 0 to 25
-print(monogram_prob)
+
 def random_letter_gen(num_letters=1):
     '''
     Create list random letters using the standard English frequency.
