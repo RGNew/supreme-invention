@@ -14,9 +14,14 @@ with open('english_monograms.txt', 'r') as f:
         monogram_counts[letter.lower()] = count
 
 # add up the values in the dictionary
-total = sum([monogram_counts[letter] for letter in monogram_counts.keys()])
+total = sum(monogram_counts.values())
 
 monogram_prob = {letter: monogram_counts[letter] / total for letter in monogram_counts.keys()}
 
 # for letter, prob in monogram_prob.items():
 #     print('Letter:', letter,'has frequency', prob)
+
+if __name__ == "__main__":
+    print("Hello")
+else:
+    print("bye")

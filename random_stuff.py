@@ -6,6 +6,21 @@ alphabet = string.ascii_lowercase  # creates string from all lowercase letters
 
 rand_val = random.randint(0,25)  # generates a random number from 0 to 25
 
+def user_defined_doc():
+    '''
+    Requests input from the user for the number of paragraphs and the number of sentences per paragraph.
+    '''
+
+    paragraph_count = input("Please enter the amount of paragraphs the document should have.")
+    paragraph_count = int(paragraph_count)
+    paragraph_sentence_count = input("Please enter the number of sentences per paragraph.")
+    paragraph_sentence_count = int(paragraph_sentence_count)
+
+    random_document_gen(paragraph_count,paragraph_sentence_count)
+
+    return
+
+
 def random_letter_gen(num_letters=1):
     '''
     Create list random letters using the standard English frequency.
@@ -45,12 +60,11 @@ def random_sentence_gen():
     
     return sentence
 
-def random_paragraph_gen():
+def random_paragraph_gen(paragraph_sentence_count=3):
     '''
     Prints out a paragraph composed of paragraph_sentence_count randomized sentences.
     '''
 
-    paragraph_sentence_count = random.randint(1,6)  # sets the amount of sentences in the paragraph
     paragraph = ''  # intializes the paragraph to be empty
 
     for _ in range(paragraph_sentence_count):  # for loop to print each sentence
@@ -59,18 +73,21 @@ def random_paragraph_gen():
     
     return paragraph  # returns the paragraph from the function
 
-def random_document_gen():
+def random_document_gen(paragraph_count=3, paragraph_sentence_count=3):
     '''
     Prints mutiple randomized paragraphs to a document.
     '''
 
-    paragraph_count = random.randint(5,10)  # picks a random integer for the amount of paragraphs
     paragraph = ''  # initializes the paragraph to an empty string
 
     with open('random_document.html','w') as f:  # opens the HTML document that will be written to
         for _ in range(paragraph_count):  #  for loop for writing paragraphs to document
-            paragraph = random_paragraph_gen()  # generates the current random paragraph
+            paragraph = random_paragraph_gen(paragraph_sentence_count)  # generates the current random paragraph
             f.write('<p>' + paragraph + '</p>')  # writes the current paragraph to the document with p tags
 
+
+
 #random_paragraph_gen()
-random_document_gen()  # runs the fucntion to generate the randomized HTML doc
+
+if __name__ == "__main__":
+    user_defined_doc()  # runs the fucntion to generate the randomized HTML doc
