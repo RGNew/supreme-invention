@@ -29,8 +29,8 @@ Miscellaneous Python scripts
         2. ~~create p objects for paragraphs.~~
    
 5. Take user input.
-    1. Take header name
-    2. Take count for letters in words.
+    1. ~~Take input for paragraph amount and length.~~
+    2. Take header name
     3. Take in desired filename.
     4. Take multiple inputs for determining range.
    
